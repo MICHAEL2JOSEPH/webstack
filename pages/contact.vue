@@ -164,14 +164,14 @@ div .classes {
             overflow: hidden;
   }
         
-        input[type=text],
+        /* input[type=text], input[type=text]
         textarea,
         select {
             width: 100%;
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 4px;
-        }
+        } */
         
         input[type=submit] {
             width: 150px;
