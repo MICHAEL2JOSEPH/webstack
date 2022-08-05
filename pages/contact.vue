@@ -132,6 +132,14 @@ div .classes {
             border-radius: 8px;
             outline: none;
         }
+
+        .class {
+          width: 100%;
+          padding: 12px;
+          border: none;
+          border-radius: 8px;
+          outline: none;
+        }
         
         input[type=submit] {
             width: 150px;
