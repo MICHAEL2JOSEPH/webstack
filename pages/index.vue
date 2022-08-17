@@ -14,7 +14,7 @@
       <h3 style="color:beige;">from Nigeria 💚🤍💚.</h3>
       <p>You can reach me in the <br> <strong class="ii">contact page.</strong></p>
       <a href="./contact">Contact me</a>
-      <a href="./" class="btn1">About me</a>
+      <a href="./about" class="btn1">About me</a>
     </div>
     <div class="seconddiv"><div class="widthB">
        
@@ -90,7 +90,7 @@
   }
 </script>
 
-<style>
+<style scoped>
 * {
   padding: 0;
   margin: 0;

@@ -3,7 +3,7 @@
   <div>
         <!--Add few elements to the form-->
       <form ref="form" @submit.prevent="sendEmail">
-       <div class="classes">
+       <div class="classes classes1">
         <input type="text" name="from_name" placeholder="Enter your full name" autofocus required>
        </div>
         
@@ -70,7 +70,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 * {
   padding: 0;
