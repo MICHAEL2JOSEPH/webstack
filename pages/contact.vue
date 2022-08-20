@@ -1,11 +1,11 @@
 <template>
-<div class="container content">
+<div  class="container content">
   <div>
         <!--Add few elements to the form-->
       <form ref="form" @submit.prevent="sendEmail">
-       <div class="classes classes1">
-        <input type="text" name="from_name" placeholder="Enter your full name" autofocus required>
-       </div>
+      <div class="classes classes1">
+        <HeaderInput />
+      </div>
         
         <div class="classes classes1">
             <input type="email" name="user_email" class="name" placeholder="Enter your @email address" required/>
@@ -24,7 +24,7 @@
           <div>
             <label for="userId">Email:</label>
             <span> workflowmikedev@gmail.com</span>
-             <label for="userId">Mobile N<span style="text-decoration: underline; color: purple;">o</span>:</label>
+            <label for="userId">Mobile N<span style="text-decoration: underline; color: purple;">o</span>:</label>
             <span> 09048356702 </span>
             <p class="mk"><a target="_blank" href="https://www.facebook.com/profile.php?id=100059001940097"><img class="wf" src="./images/facebook2 logo.png" alt="facebook"></a>
             <a target="_blank" href="https://www.instagram.com/crystalartzs/"><img class="wf" src="./images/instagram logo.png" alt="instagram"></a>
@@ -33,10 +33,6 @@
             <a target="_blank" href="https://www.linkedin.com/in/michael-joseph-838498243"><img class="wf" src="./images/linkedin2 logo.png" alt="instagram"></a>
             </p>
             </div>
-            <!-- <div>
-            <label for="userId">Email:</label>
-            <span> workflowmikedev@gmail.com</span>
-            </div> -->
           </div>
           </div>
         </form>
@@ -50,12 +46,7 @@
 import emailjs from '@emailjs/browser';
 
 export default {
-    // data() {
-    //   return {
-    //     copySucceeded: null
-    //   }
-    // },
-     methods: {
+    methods: {
     sendEmail() {
       emailjs.sendForm('service_4rqhl94', 'template_f4cn1cj', this.$refs.form, 'GSYzkqEmk8nQoMESZ')
         .then((result) => {
@@ -65,12 +56,18 @@ export default {
             alert("Message not sent❌, this could be due to poor or no internet connection.")
             console.log('FAILED...', error.text);
         });
-    }
+    },
+    // cannotbeempty() {
+    //   const name = document.getElementById("name_error");
+    //   if(name == "") {
+    //     alert("Name cannot be empty")
+    //   }
+    // }
   }
 }
 </script>
 
-<style scoped>
+<style>
 
 * {
   padding: 0;
@@ -82,8 +79,8 @@ export default {
   padding-top: 8%;
   width: 100%;
   align-items: center;
-  /* display: flex;
-  justify-content: center; */
+  display: flex;
+  justify-content: center;
 }
 
 span {
@@ -122,7 +119,7 @@ div .classes {
   overflow: hidden;
 }
 
-  input[type=text], input[type=email],
+      input[type=email], 
         textarea,
         select {
             width: 100%;
@@ -140,6 +137,24 @@ div .classes {
           border-radius: 8px;
           outline: none;
         }
+/* 
+        input[type=text] {
+          width: 100%;
+            height: auto;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+        } */
+
+        .mood {
+            padding: 10px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(20px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            overflow: hidden;
+        }
         
         input[type=submit] {
             width: 150px;
@@ -155,30 +170,12 @@ div .classes {
 ::-webkit-scrollbar-thumb{background-color: transparent;}
 
 @media only screen and (max-width: 575px) {
-  div .container1 {
-            padding: 10px;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-        backdrop-filter: blur(20px);
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-            overflow: hidden;
-  }
-        
-        /* input[type=text], input[type=text]
-        textarea,
-        select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        } */
-        
         input[type=submit] {
             width: 150px;
             float: right;
             cursor: pointer;
             padding: 7px;
-             border: none;
+            border: none;
             border-radius: 8px;
             color: white;
             background-image: linear-gradient(to right,#08043b, #48a2d6);

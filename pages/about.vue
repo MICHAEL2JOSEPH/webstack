@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class="container4">
       <div class="about">
         <p></p>
       </div>
@@ -15,14 +15,14 @@ export default {
 }
 
 </script>
-<style scoped>
+<style>
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.container {
+.container4 {
   display: flex;
   justify-content: center;
   align-items: center;

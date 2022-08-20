@@ -42,8 +42,8 @@
           </template>
           <b-dropdown-item href="#">Profile</b-dropdown-item>
           <b-dropdown-item href="#">Sign Out</b-dropdown-item>
-           <div  class="toggle" ontoggle="doStuff()">
-     <b-form-checkbox ontoggle="doStuff()" switch size="lg"></b-form-checkbox>
+           <div  class="toggle">
+     <b-form-checkbox switch size="lg"></b-form-checkbox>
         </div>
         </b-nav-item-dropdown>
       </b-navbar-nav>
@@ -65,7 +65,7 @@ export default {
 
 </script>
 
-<style scoped>
+<style>
 .pg {
     background-color: transparent;
 }
